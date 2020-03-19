@@ -8,21 +8,23 @@ namespace StatePattern_Exc2
         static void Main(string[] args)
         {
             FlashLight _myFlashlight = new FlashLight();
-            var mode = 'q';
+            var mode = 'x';
 
             
 
-            while (mode != 'e')
+            while (char.ToUpper(mode) != 'Q')
             {
+                Console.WriteLine("Enter event: ");
                 mode = Console.ReadKey().KeyChar;
 
-                switch (mode)
+                switch (char.ToUpper(mode))
                 {
-                    case 'q':
-                        _myFlashlight.Power();
+                    case 'X':
+                        _myFlashlight.X();
                         break;
-                    case 'w':
-                        _myFlashlight.Solid();
+
+                    case 'Y':
+                        _myFlashlight.Y();
                         break;
                 }
             }   

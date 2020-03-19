@@ -20,7 +20,7 @@ namespace StatePattern_Exc2
         }
         public override void HandlePower(FlashLight fl)
         {
-            fl.LightOn();
+            fl.LightOff();
             fl.SetState(new Off());
         }
     }
@@ -29,7 +29,8 @@ namespace StatePattern_Exc2
     {
         public override void HandlePower(FlashLight fl)
         {
-            fl.LightOff();
+            fl.LightOn();
+            fl.SetState(new On());
         }
     }
 
